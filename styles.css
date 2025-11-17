@@ -48,7 +48,7 @@ body {
 }
 
 /* ------------------------------
-   TEXTOS PRINCIPALES
+   TEXTOS
 ------------------------------ */
 .title {
   margin: 15px 0 20px;
@@ -68,9 +68,6 @@ body {
   margin: 35px 0 50px;
 }
 
-/* ------------------------------
-   TEXTOS INFORMACIÓN
------------------------------- */
 .info-telegram,
 .info-whatsapp {
   font-size: 16px;
@@ -81,61 +78,58 @@ body {
   line-height: 1.35;
 }
 
-.info-telegram {
-  margin-top: 25px;
-}
+.info-telegram { margin-top: 25px; }
+.info-whatsapp { margin-top: 18px; }
 
-.info-whatsapp {
-  margin-top: 18px;
-}
-
-/* ------------------------------
-   BOTÓN TELEGRAM
------------------------------- */
-.telegram-button {
-  margin-top: 15px;
+/* ==========================================================
+   BOTONES — MISMO TAMAÑO, MÁS CHICOS Y NO FULL WIDTH
+========================================================== */
+.button-base {
+  margin-top: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: #2AABEE;
-
-  padding: 15px 22px;
-  min-width: 260px;
+  padding: 10px 16px;        /* más compacto */
+  height: 50px;              /* altura exacta */
+  min-width: 220px;
+  max-width: 340px;          /* 🔥 evita ocupar todo el ancho del celu */
 
   border-radius: 12px;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 700;
   color: white;
   text-decoration: none;
 
   cursor: pointer;
-  box-shadow: 0 0 15px rgba(42,171,238,0.7);
+  transition: transform .2s, box-shadow .2s;
 
   position: relative;
   overflow: hidden;
+}
 
-  /* transición normal */
-  transition: transform .2s, box-shadow .2s;
-
-  /* ♥️ efecto latido */
+/* ------------------------------
+   BOTÓN TELEGRAM (jerarquía)
+------------------------------ */
+.telegram-button {
+  composes: button-base;
+  background-color: #2AABEE;
+  box-shadow: 0 0 12px rgba(42,171,238,0.6);
   animation: tgHeartbeat 2.2s infinite ease-in-out;
 }
 
-/* ICONO */
-.telegram-icon {
-  margin-left: 10px;
-  width: 26px;
-  height: 26px;
-}
-
-/* Hover normal */
 .telegram-button:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 22px rgba(42,171,238,1);
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(42,171,238,1);
 }
 
-/* ⭐ BRILLO QUE RECORRE */
+.telegram-icon {
+  margin-left: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+/* brillo */
 .telegram-button::before {
   content: "";
   position: absolute;
@@ -143,70 +137,49 @@ body {
   left: -150%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.7),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
   transform: skewX(-25deg);
   animation: tgShine 3.5s infinite;
   pointer-events: none;
 }
 
-/* ♥ ANIMACIÓN LATIDO */
+/* latido */
 @keyframes tgHeartbeat {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.045); }
 }
 
-/* ✨ ANIMACIÓN DEL BRILLO */
+/* brillo recorriendo */
 @keyframes tgShine {
   0%   { left: -150%; }
   100% { left: 200%; }
 }
 
-
 /* ------------------------------
-   BOTÓN WHATSAPP — estilo simple clásico
+   BOTÓN WHATSAPP
 ------------------------------ */
 .whatsapp-button {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  composes: button-base;
   background-color: #25D366;
-
-  padding: 15px 22px;
-  min-width: 260px;
-
-  border-radius: 12px;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
 }
 
 .whatsapp-button:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 18px rgba(0,0,0,0.65);
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0,0,0,0.55);
 }
 
 .whatsapp-icon {
-  margin-left: 10px;
-  width: 28px;
-  height: 28px;
+  margin-left: 8px;
+  width: 22px;
+  height: 22px;
 }
 
 /* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-button,
-  .telegram-button {
+  .telegram-button,
+  .whatsapp-button {
     transition: none !important;
+    animation: none !important;
   }
 }
