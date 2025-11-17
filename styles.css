@@ -89,6 +89,10 @@ body {
   margin-top: 18px;
 }
 
+/* ==========================================================
+   BOTONES (achicados)
+========================================================== */
+
 /* ------------------------------
    BOTÓN TELEGRAM
 ------------------------------ */
@@ -100,8 +104,12 @@ body {
 
   background-color: #2AABEE;
 
-  padding: 15px 22px;
-  min-width: 260px;
+  /* 🔥 ACHICADO: antes 15px 22px */
+  padding: 10px 16px;
+
+  /* 🔥 ACHICADO: antes min-width 260px */
+  min-width: 200px;
+  width: fit-content;
 
   border-radius: 12px;
   font-size: 22px;
@@ -115,10 +123,8 @@ body {
   position: relative;
   overflow: hidden;
 
-  /* transición normal */
   transition: transform .2s, box-shadow .2s;
 
-  /* ♥️ efecto latido */
   animation: tgHeartbeat 2.2s infinite ease-in-out;
 }
 
@@ -135,7 +141,7 @@ body {
   box-shadow: 0 0 22px rgba(42,171,238,1);
 }
 
-/* ⭐ BRILLO QUE RECORRE */
+/* Brillo */
 .telegram-button::before {
   content: "";
   position: absolute;
@@ -154,21 +160,20 @@ body {
   pointer-events: none;
 }
 
-/* ♥ ANIMACIÓN LATIDO */
+/* Latido */
 @keyframes tgHeartbeat {
   0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.045); }
+  50% { transform: scale(1.045); }
 }
 
-/* ✨ ANIMACIÓN DEL BRILLO */
+/* Shine */
 @keyframes tgShine {
-  0%   { left: -150%; }
+  0% { left: -150%; }
   100% { left: 200%; }
 }
 
-
 /* ------------------------------
-   BOTÓN WHATSAPP — estilo simple clásico
+   BOTÓN WHATSAPP
 ------------------------------ */
 .whatsapp-button {
   margin-top: 15px;
@@ -178,8 +183,11 @@ body {
 
   background-color: #25D366;
 
-  padding: 15px 22px;
-  min-width: 260px;
+  /* 🔥 ACHICADO */
+  padding: 10px 16px;
+
+  min-width: 200px;
+  width: fit-content;
 
   border-radius: 12px;
   font-size: 22px;
