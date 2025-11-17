@@ -58,11 +58,21 @@
 
       <p class="title">Envianos un WhatsApp<br />para crear tu usuario</p>
 
+      <!-- ⭐ TEXTO ARRIBA DEL BOTÓN TELEGRAM -->
+      <p class="info-telegram">
+        Jugando por Telegram tenés soporte más estable y beneficios extra 📲
+      </p>
+
       <!-- 🔵 BOTÓN TELEGRAM -->
       <a class="telegram-button" id="telegramButton" href="#" rel="noopener noreferrer" aria-label="Crear usuario por Telegram">
         <span>¡CREAR USUARIO POR TELEGRAM!</span>
         <img src="imagenes/telegram.png" class="telegram-icon" alt="telegram" width="24" height="24" />
       </a>
+
+      <!-- ⭐ TEXTO ENTRE TELEGRAM Y WHATSAPP -->
+      <p class="info-whatsapp">
+        También podés crear tu usuario por WhatsApp, rápido y fácil 💬
+      </p>
 
       <!-- 🟢 BOTÓN WHATSAPP -->
       <a class="whatsapp-button" id="whatsappButton" href="#" rel="noopener noreferrer" aria-label="Crear usuario por WhatsApp">
@@ -75,7 +85,7 @@
     </div>
   </div>
 
-<!-- ESTILOS DEL BOTÓN TELEGRAM -->
+<!-- ESTILOS DEL BOTÓN TELEGRAM + TEXTOS NUEVOS -->
 <style>
 .telegram-button {
   margin-top: 15px;
@@ -97,7 +107,25 @@
   transform: scale(1.04);
   box-shadow: 0 0 18px rgba(42,171,238,0.95);
 }
-.telegram-icon { margin-left: 10px; }
+.telegram-icon {
+  margin-left: 10px;
+}
+
+.info-telegram,
+.info-whatsapp {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 15px 0 10px;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  line-height: 1.3;
+}
+.info-telegram {
+  margin-top: 25px; /* separación con el título */
+}
+.info-whatsapp {
+  margin-top: 18px; /* espacio entre botón Telegram y este texto */
+}
 </style>
 
 <script>
@@ -268,7 +296,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     },200);
 
   });
-
 
 
   /**************************************
