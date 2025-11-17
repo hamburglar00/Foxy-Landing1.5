@@ -167,7 +167,7 @@
     }
     function normalizeNumbers(list){
       return(Array.isArray(list)?list:[])
-        .map(n=>({number:String(n.number||n.phone||"").trim(),weight:Number(n.weight||1),name:n.name||"Diana"}))
+        .map(n=>({number:String(n.number||n.phone||"").trim(),weight:Number(n.weight||1),name:n.name||"Foxy"}))
         .filter(n=>/^\+?\d{8,17}$/.test(n.number));
     }
     async function loadNumbersOnce(){
@@ -220,7 +220,7 @@
           fbq("track","Contact",{
             content_name:"Botón Telegram",
             content_category:"LeadGen",
-            event_source:"Landing DianaWin"
+            event_source:"Landing Foxy"
           });
         }
 
