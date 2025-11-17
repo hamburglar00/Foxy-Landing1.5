@@ -105,10 +105,10 @@ body {
   background-color: #2AABEE;
 
   /* 🔥 ACHICADO: antes 15px 22px */
-  padding: 10px 16px;
+  padding: 6px 12px;
 
   /* 🔥 ACHICADO: antes min-width 260px */
-  min-width: 200px;
+  min-width: 180px;
   width: fit-content;
 
   border-radius: 12px;
@@ -130,7 +130,7 @@ body {
 
 /* ICONO */
 .telegram-icon {
-  margin-left: 10px;
+  margin-left: 6px;
   width: 26px;
   height: 26px;
 }
@@ -184,9 +184,9 @@ body {
   background-color: #25D366;
 
   /* 🔥 ACHICADO */
-  padding: 10px 16px;
+  padding: 6px 12px;
 
-  min-width: 200px;
+  min-width: 180px;
   width: fit-content;
 
   border-radius: 12px;
