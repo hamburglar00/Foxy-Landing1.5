@@ -88,13 +88,13 @@ body {
 .benefits {
   margin-top: 0 !important;  /* 👈 elimina separación */
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.35;
 }
 
 .info-telegram,
 .info-whatsapp {
-  font-size: 16px;
+  font-size: 12px;
   color: #ffffff;
   margin: 15px 0 10px;
   font-weight: 500;
