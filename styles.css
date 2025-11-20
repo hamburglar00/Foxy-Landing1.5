@@ -71,6 +71,27 @@ body {
 /* ------------------------------
    TEXTOS INFORMACIÓN
 ------------------------------ */
+.title-main {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+  color: #b34bff;
+}
+
+.title-sub {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0 8px;
+  color: #b34bff;
+}
+
+.benefits {
+  margin-top: 0 !important;  /* 👈 elimina separación */
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
 .info-telegram,
 .info-whatsapp {
   font-size: 16px;
