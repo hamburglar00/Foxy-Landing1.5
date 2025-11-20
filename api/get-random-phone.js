@@ -35,8 +35,8 @@ export default async function handler(req, res) {
     console.error("❌ Error al obtener número:", err.message);
     // Fallback automático (Soporte Diana)
     return res.status(200).json({
-      number: "5493517699950",
-      name: "Diana",
+      number: "549351",
+      name: "Foxy",
       weight: 1,
     });
   }
