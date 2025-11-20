@@ -1,4 +1,4 @@
-import { CONFIG_SHEETS } from '../credenciales/google-sheets.js';
+import { CONFIG_SHEETS } from '../credenciales/google-sheets.mjs';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
