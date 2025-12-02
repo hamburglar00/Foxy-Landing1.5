@@ -251,7 +251,19 @@
           }).catch(console.error);
         });
 
-        setTimeout(()=>window.open(`https://t.me/${tgUser}`,"_blank","noopener"),200);
+      const startPayload = promo_code 
+        ? `FOXY-${promo_code}`   // Para trackear desde la landing
+        : "Hola Foxy!";                // fallback simple
+  
+        
+        setTimeout(
+          () => window.open(
+            `https://t.me/${tgUser}?start=${encodeURIComponent(startPayload)}`,
+            "_blank",
+            "noopener"
+          ),
+          200
+        );
       });
 
 
